@@ -31,32 +31,73 @@ class _PrestadoresDeServicoState extends State<PrestadoresDeServico> {
 
   List<Widget> _getCards() {
     List<Widget> cards = [
-    Center(
-      child: Card(
-        child: InkWell(
-          splashColor: Colors.blue.withAlpha(30),
-          onTap: () {
-            Navigator.push(context, MaterialPageRoute(builder: (context) => Formatacao()));
-          },
-          child: Container(
-            width: 300,
-            height: 100,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: <Widget>[
-                Image.asset("assets/json.png", ),
-                Column(
-                  children: <Widget>[
-                    Text("Jason info", style: TextStyle(fontSize: 30.0),),
-                    Text("R\$ 40-80", style: TextStyle(fontSize: 20),),
-                  ],
-                ),
-              ],
+      Center(
+        child: Card(
+          child: InkWell(
+            splashColor: Colors.blue.withAlpha(30),
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => Formatacao()));
+            },
+            child: Container(
+              width: 300,
+              height: 100,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: <Widget>[
+                  Image.asset(
+                    "assets/json.png",
+                  ),
+                  Row(children: [
+                    Column(
+                      children: <Widget>[
+                        Text(
+                          "Jason info",
+                          style: TextStyle(fontSize: 30.0),
+                        ),
+                        Text(
+                          "R\$ 40-80",
+                          style: TextStyle(fontSize: 20),
+                        ),
+                        Row(
+                          children: <Widget>[
+                            Icon(
+                              Icons.star,
+                              color: Colors.amber,
+                            ),
+                            Icon(
+                              Icons.star,
+                              color: Colors.amber,
+                            ),
+                            Icon(
+                              Icons.star,
+                              color: Colors.amber,
+                            ),
+                            Icon(
+                              Icons.star,
+                              color: Colors.amber,
+                            ),
+                            Icon(
+                              Icons.star,
+                              color: Colors.amber,
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                    GestureDetector(
+                      child: Icon(Icons.more_vert),
+                      onTap: (){
+
+                      },
+                    ),
+                  ])
+                ],
+              ),
             ),
           ),
         ),
       ),
-    ),
       Center(
         child: Card(
           child: InkWell(
@@ -70,11 +111,43 @@ class _PrestadoresDeServicoState extends State<PrestadoresDeServico> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: <Widget>[
-                  Image.asset("assets/json.png", ),
+                  Image.asset(
+                    "assets/json.png",
+                  ),
                   Column(
                     children: <Widget>[
-                      Text("Jason info", style: TextStyle(fontSize: 30.0),),
-                      Text("R\$ 40-80", style: TextStyle(fontSize: 20.0),),
+                      Text(
+                        "Jason info",
+                        style: TextStyle(fontSize: 30.0),
+                      ),
+                      Text(
+                        "R\$ 40-80",
+                        style: TextStyle(fontSize: 20.0),
+                      ),
+                      Row(
+                        children: <Widget>[
+                          Icon(
+                            Icons.star,
+                            color: Colors.amber,
+                          ),
+                          Icon(
+                            Icons.star,
+                            color: Colors.amber,
+                          ),
+                          Icon(
+                            Icons.star,
+                            color: Colors.amber,
+                          ),
+                          Icon(
+                            Icons.star,
+                            color: Colors.amber,
+                          ),
+                          Icon(
+                            Icons.star,
+                            color: Colors.amber,
+                          ),
+                        ],
+                      ),
                     ],
                   ),
                 ],
