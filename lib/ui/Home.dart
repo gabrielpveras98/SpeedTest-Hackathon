@@ -153,7 +153,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                tecla("Reparos genéricos", Icons.build, context, Formatacao()),
+                tecla("Reparos", Icons.build, context, Formatacao()),
                 tecla("Wi-fi", Icons.wifi, context, Formatacao()),
               ],
             ),
