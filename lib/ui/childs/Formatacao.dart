@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-
-import 'childs/PrestadoresDeServico.dart';
+import 'package:image_picker/image_picker.dart';
+import 'package:menino_da_ti/ui/childs/childs/Pagamento.dart';
 
 class Formatacao extends StatefulWidget {
   @override
@@ -22,6 +22,8 @@ class _FormatacaoState extends State<Formatacao> {
   String atendimento = "Sem resposta";
   String _currentCity;
 
+  DateTime inicio;
+
   TextEditingController _observacao = TextEditingController();
 
   double custo = 40;
@@ -32,6 +34,7 @@ class _FormatacaoState extends State<Formatacao> {
   void initState() {
     _dropDownMenuItems = getDropDownMenuItems();
     _currentCity = _dropDownMenuItems[0].value;
+    inicio = DateTime.now();
     super.initState();
   }
 
@@ -76,7 +79,7 @@ class _FormatacaoState extends State<Formatacao> {
                     FlatButton(
                       child: Text("Sim"),
                       onPressed: () {
-
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => Pagamento()));
                       },
                     ),
                     FlatButton(
@@ -238,9 +241,9 @@ class _FormatacaoState extends State<Formatacao> {
   }
 
   List<DropdownMenuItem<String>> getDropDownMenuItems() {
-    List<DropdownMenuItem<String>> items = new List();
+    List<DropdownMenuItem<String>> items = List();
     for (String city in _sistemas) {
-      items.add(new DropdownMenuItem(value: city, child: new Text(city)));
+      items.add(DropdownMenuItem(value: city, child: Text(city)));
     }
     return items;
   }
