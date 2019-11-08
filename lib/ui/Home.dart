@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:menino_da_ti/helpers/Sqflite.dart';
 import 'package:menino_da_ti/ui/childs/Formatacao.dart';
+import 'package:menino_da_ti/ui/childs/SuporteTecnico.dart';
 import 'package:menino_da_ti/ui/childs/childs/PrestadoresDeServico.dart';
 import "package:image_picker/image_picker.dart";
 
@@ -143,7 +144,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
               children: <Widget>[
                 tecla("Formatação", Icons.computer, context,
                     PrestadoresDeServico()),
-                tecla("Suporte técnico", Icons.person, context, Formatacao()),
+                tecla("Suporte técnico", Icons.person, context, SuporteTecnico()),
               ],
             ),
           ),

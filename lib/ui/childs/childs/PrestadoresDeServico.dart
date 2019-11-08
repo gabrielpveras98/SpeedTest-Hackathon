@@ -85,11 +85,16 @@ class _PrestadoresDeServicoState extends State<PrestadoresDeServico> {
                         ),
                       ],
                     ),
-                    GestureDetector(
-                      child: Icon(Icons.more_vert),
-                      onTap: (){
-
-                      },
+                    DropdownButton(
+                      icon: Icon(Icons.more_vert),
+                      items: <String>['One', 'Two', 'Free', 'Four']
+                          .map<DropdownMenuItem<String>>((String value) {
+                        return DropdownMenuItem<String>(
+                          value: value,
+                          child: Text(value),
+                        );
+                      })
+                          .toList(),
                     ),
                   ])
                 ],
@@ -149,6 +154,17 @@ class _PrestadoresDeServicoState extends State<PrestadoresDeServico> {
                         ],
                       ),
                     ],
+                  ),
+                  DropdownButton(
+                    icon: Icon(Icons.more_vert),
+                    items: <String>['One', 'Two', 'Free', 'Four']
+                        .map<DropdownMenuItem<String>>((String value) {
+                      return DropdownMenuItem<String>(
+                        value: value,
+                        child: Text(value),
+                      );
+                    })
+                        .toList(),
                   ),
                 ],
               ),
