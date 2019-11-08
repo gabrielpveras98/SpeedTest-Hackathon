@@ -55,13 +55,17 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
   }
 
   List<Widget> adicionar(BuildContext context) {
-    List<Widget> myTabs = <Widget>[homeTab(context), Text("teste"), Text("teste")];
+    List<Widget> myTabs = <Widget>[
+      homeTab(context),
+      acompanhar(context),
+      Text("teste")
+    ];
     return myTabs;
   }
 
   List<Tab> tab = [
     Tab(text: 'Home'),
-    Tab(text: 'Acompar'),
+    Tab(text: 'Acompanhar'),
     Tab(text: 'Teste'),
   ];
 
@@ -99,44 +103,47 @@ Widget tecla(String text, IconData icons, BuildContext context, Widget widget) {
 Widget homeTab(BuildContext context) {
   return Scaffold(
       body: SingleChildScrollView(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: <Widget>[
-            Padding(
-              padding: EdgeInsets.all(20.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  tecla("Formatação", Icons.computer, context,
-                      PrestadoresDeServico()),
-                  tecla("Suporte técnico", Icons.person, context, Formatacao()),
-                ],
-              ),
-            ),
-            Padding(
-              padding: EdgeInsets.all(20.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  tecla(
-                      "Reparos genéricos", Icons.build, context, Formatacao()),
-                  tecla("Wi-fi", Icons.wifi, context, Formatacao()),
-                ],
-              ),
-            ),
-            Padding(
-              padding: EdgeInsets.all(20.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  tecla("SmartTV", Icons.tv, context, Formatacao()),
-                  tecla("Peças e acessórios", Icons.shopping_cart, context,
-                      Formatacao()),
-                ],
-              ),
-            ),
-          ],
+    child: Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: <Widget>[
+        Padding(
+          padding: EdgeInsets.all(20.0),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              tecla("Formatação", Icons.computer, context,
+                  PrestadoresDeServico()),
+              tecla("Suporte técnico", Icons.person, context, Formatacao()),
+            ],
+          ),
         ),
-      ));
+        Padding(
+          padding: EdgeInsets.all(20.0),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              tecla("Reparos genéricos", Icons.build, context, Formatacao()),
+              tecla("Wi-fi", Icons.wifi, context, Formatacao()),
+            ],
+          ),
+        ),
+        Padding(
+          padding: EdgeInsets.all(20.0),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              tecla("SmartTV", Icons.tv, context, Formatacao()),
+              tecla("Peças e acessórios", Icons.shopping_cart, context,
+                  Formatacao()),
+            ],
+          ),
+        ),
+      ],
+    ),
+  ));
+}
+
+Widget acompanhar(BuildContext context) {
+  return Text("teste acompanhar");
 }
